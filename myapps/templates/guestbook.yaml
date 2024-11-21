@@ -25,26 +25,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  
-  hooks:
-    - name: post-sync-echo
-      type: PostSync
-      job:
-        apiVersion: batch/v1
-        kind: Job
-        metadata:
-          name: post-sync-echo-job
-        spec:
-          template:
-            spec:
-              containers:
-                - name: echo-container
-                  image: busybox
-                  command:
-                    - "sh"
-                    - "-c"
-                    - |
-                        echo "Sleeping for 1 minute..."
-                        sleep 60
-                        echo "This is a post-sync hook after sleep!"
-              restartPolicy: Never
