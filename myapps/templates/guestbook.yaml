@@ -11,7 +11,7 @@ spec:
      path: helm-guestbook
      helm:
        valueFiles:
-         - $values/values.yaml
+         - "$values/values/values.yaml"
          
    - repoURL: https://github.com/mohamedragab2024/gitops-apps.git
      targetRevision: main
