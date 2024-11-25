@@ -17,7 +17,7 @@ spec:
      ref: values
    - repoURL: https://github.com/VictoriaMetrics/helm-charts
      targetRevision: victoria-metrics-k8s-stack-0.24.3
-     path: victoria-metrics-k8s-stack-0.24.3/charts/victoria-metrics-k8s-stack/charts/crds/crds
+     path: charts/victoria-metrics-k8s-stack/charts/crds/crds
   destination:
     server: https://kubernetes.default.svc
     namespace: default
